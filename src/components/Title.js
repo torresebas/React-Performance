@@ -1,10 +1,8 @@
-const Title = ({ children }) => {
-  console.log('rendering title')
-  return (
-    <h1>
-      {children}
-    </h1>
-  )
-}
+import { memo } from "react";
 
-export default Title
+const Title = ({ children }) => {
+  console.log("rendering title", children);
+  return <h1>{children}</h1>;
+};
+
+export default memo(Title);
